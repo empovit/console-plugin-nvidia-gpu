@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
     - 'deployment/**/*'
+  workflow_dispatch:
 
 jobs:
   lint-test:
