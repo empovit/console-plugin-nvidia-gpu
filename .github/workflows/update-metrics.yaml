@@ -8,14 +8,13 @@ on:
 jobs:
   update-metrics:
     runs-on: ubuntu-latest
-    if: github.repository == 'rh-ecosystem-edge/console-plugin-nvidia-gpu'
     permissions:
       contents: write
       pull-requests: write
       issues: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
       - name: Run update-metrics script
         run: ./scripts/update-metrics.sh
